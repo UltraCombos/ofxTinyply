@@ -1,3 +1,2 @@
 # ofxTinyply
-tinyply lib wrapped for openFrameworks
-https://github.com/ddiakopoulos/tinyply
+tinyply lib (https://github.com/ddiakopoulos/tinyply) wrapped for openFrameworks
