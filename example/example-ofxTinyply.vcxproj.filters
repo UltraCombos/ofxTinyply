@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="src\ofApp.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\main.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ofxTinyply.cpp">
+      <Filter>addons\ofxTinyply\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\lib\tinyply\tinyply.cpp">
+      <Filter>addons\ofxTinyply\lib\tinyply</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{d8376475-7454-4a24-b08a-aac121d3ad6f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons">
+      <UniqueIdentifier>{b706e9b7-8737-451b-86c8-2b9c8750ff89}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxTinyply">
+      <UniqueIdentifier>{77b0a62a-eb09-45c1-9633-bd95011f393c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxTinyply\src">
+      <UniqueIdentifier>{d338b4a2-4b70-4527-a0c2-3f5c278c4b58}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxTinyply\lib">
+      <UniqueIdentifier>{6d6a5195-6532-4dfc-a46d-97b7e2f91184}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxTinyply\lib\tinyply">
+      <UniqueIdentifier>{1366c767-2bb3-40a0-b9b8-cbb36634beae}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\ofApp.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ofxTinyply.h">
+      <Filter>addons\ofxTinyply\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lib\tinyply\tinyply.h">
+      <Filter>addons\ofxTinyply\lib\tinyply</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="icon.rc" />
+  </ItemGroup>
+</Project>
