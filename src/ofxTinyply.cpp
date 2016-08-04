@@ -2,22 +2,6 @@
 
 using namespace tinyply;
 
-namespace
-{
-	typedef std::chrono::time_point<std::chrono::high_resolution_clock> timepoint;
-	std::chrono::high_resolution_clock c;
-
-	inline std::chrono::time_point<std::chrono::high_resolution_clock> now()
-	{
-		return c.now();
-	}
-
-	inline double difference_micros(timepoint start, timepoint end)
-	{
-		return (double)std::chrono::duration_cast<std::chrono::microseconds>(end - start).count();
-	}
-}
-
 bool ofxTinyply::loadFromFile(const string& filename)
 {
 	// Tinyply can and will throw exceptions at you!
@@ -63,7 +47,8 @@ bool ofxTinyply::loadFromFile(const string& filename)
 		// they are "flattened"... i.e. verts = {x, y, z, x, y, z, ...}
 		vertexCount = file.request_properties_from_element("vertex", { "x", "y", "z" }, verts);
 		normalCount = file.request_properties_from_element("vertex", { "nx", "ny", "nz" }, norms);
-		colorCount = file.request_properties_from_element("vertex", { "red", "green", "blue", "alpha" }, colors);
+		//colorCount = file.request_properties_from_element("vertex", { "red", "green", "blue", "alpha" }, colors);
+		colorCount = file.request_properties_from_element("vertex", { "red", "green", "blue" }, colors);
 
 		// For properties that are list types, it is possibly to specify the expected count (ideal if a
 		// consumer of this library knows the layout of their format a-priori). Otherwise, tinyply
@@ -74,14 +59,15 @@ bool ofxTinyply::loadFromFile(const string& filename)
 		faceColorCount = file.request_properties_from_element("face", { "red", "green", "blue", "alpha" }, faceColors);
 
 		// Now populate the vectors...
-		timepoint before = now();
+		uint64_t before, after;
+		if (is_verbose) before = ofGetElapsedTimeMillis();
 		file.read(ss);
-		timepoint after = now();
+		if (is_verbose) after = ofGetElapsedTimeMillis();
 
 		// Good place to put a breakpoint!
 		if (is_verbose)
 		{
-			std::cout << "Parsing took " << difference_micros(before, after) << "μs: " << std::endl;
+			std::cout << "Parsing took " << after - before << " ms: " << std::endl;
 			std::cout << "\tRead " << verts.size() << " total vertices (" << vertexCount << " properties)." << std::endl;
 			std::cout << "\tRead " << norms.size() << " total normals (" << normalCount << " properties)." << std::endl;
 			std::cout << "\tRead " << colors.size() << " total vertex colors (" << colorCount << " properties)." << std::endl;

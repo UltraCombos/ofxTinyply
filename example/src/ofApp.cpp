@@ -7,7 +7,7 @@ void ofApp::setup(){
 
 	tinyply = ofxTinyply::create(true);
 	string filename = "scene_04_ts0.ply";
-	loadModel(filename);
+	//loadModel(filename);
 
 	camera.setupPerspective(false, 50, 0.01, 30.0f);
 	camera.setDistance(5.0f);
