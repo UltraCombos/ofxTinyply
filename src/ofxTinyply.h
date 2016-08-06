@@ -19,7 +19,8 @@ public:
 
 	const std::vector<ofVec3f>& getVertices() { return ply_vertices; }
 	const std::vector<ofVec3f>& getNormals() { return ply_normals; }
-	const std::vector<ofFloatColor>& getColors() { return ply_colors; }
+	//const std::vector<ofFloatColor>& getColors() { return ply_colors; }
+	const std::vector<ofVec4f>& getColors() { return ply_colors; }
 
 private:
 	ofxTinyply(bool bVerbose)
@@ -31,5 +32,5 @@ private:
 	bool is_verbose;
 	std::vector<ofVec3f> ply_vertices;
 	std::vector<ofVec3f> ply_normals;
-	std::vector<ofFloatColor> ply_colors;
+	std::vector<ofVec4f> ply_colors;
 };

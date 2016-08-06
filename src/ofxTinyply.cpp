@@ -89,8 +89,9 @@ bool ofxTinyply::loadFromFile(const string& filename)
 		}
 		if (colorCount > 0)
 		{
-			for (size_t i = 0; i < colors.size(); i+=3)
-				ply_colors.push_back(ofColor(colors[i], colors[i+1], colors[i+2]));
+			for (size_t i = 0; i < colors.size(); i += 3)
+				//ply_colors.push_back(ofColor(colors[i], colors[i+1], colors[i+2]));
+				ply_colors.emplace_back(colors[i] / 255.0f, colors[i + 1] / 255.0f, colors[i + 2] / 255.0f, 1.0f);
 		}
 
 		return true;
