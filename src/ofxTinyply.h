@@ -1,7 +1,6 @@
 #pragma once
 
 #include "ofMain.h"
-#include "tinyply/tinyply.h"
 
 using ofxTinyplyRef = std::shared_ptr<class ofxTinyply>;
 
