@@ -51,6 +51,6 @@ void ofApp::loadModel(const string& filename)
 		vbo.clear();
 		vbo.setVertexData(&vertices[0].x, 3, vertices.size(), GL_STATIC_DRAW);
 		if (normals.size() == vertices.size()) vbo.setNormalData(&normals[0].x, normals.size(), GL_STATIC_DRAW);
-		if (colors.size() == vertices.size()) vbo.setColorData(&colors[0].r, colors.size(), GL_STATIC_DRAW);
+		if (colors.size() == vertices.size()) vbo.setColorData(&colors[0].x, colors.size(), GL_STATIC_DRAW);
 	}
 }
