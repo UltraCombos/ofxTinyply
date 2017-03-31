@@ -1,0 +1,4 @@
+[submodule "libs/tinyply"]
+	path = libs/tinyply
+	url = https://github.com/ddiakopoulos/tinyply
+	branch = master

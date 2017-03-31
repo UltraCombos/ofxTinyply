@@ -1,5 +1,5 @@
 ﻿#include "ofxTinyply.h"
-#include "tinyply/tinyply.h"
+#include "tinyply.h"
 
 using namespace tinyply;
 

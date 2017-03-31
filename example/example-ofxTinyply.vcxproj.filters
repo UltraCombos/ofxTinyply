@@ -10,8 +10,8 @@
     <ClCompile Include="..\src\ofxTinyply.cpp">
       <Filter>addons\ofxTinyply\src</Filter>
     </ClCompile>
-    <ClCompile Include="..\lib\tinyply\tinyply.cpp">
-      <Filter>addons\ofxTinyply\lib\tinyply</Filter>
+    <ClCompile Include="..\libs\tinyply\source\tinyply.cpp">
+      <Filter>addons\ofxTinyply\lib\tinyply\source</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -33,6 +33,9 @@
     <Filter Include="addons\ofxTinyply\lib\tinyply">
       <UniqueIdentifier>{1366c767-2bb3-40a0-b9b8-cbb36634beae}</UniqueIdentifier>
     </Filter>
+    <Filter Include="addons\ofxTinyply\lib\tinyply\source">
+      <UniqueIdentifier>{3315fca2-93bd-4f00-adad-13a067b45685}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\ofApp.h">
@@ -41,8 +44,8 @@
     <ClInclude Include="..\src\ofxTinyply.h">
       <Filter>addons\ofxTinyply\src</Filter>
     </ClInclude>
-    <ClInclude Include="..\lib\tinyply\tinyply.h">
-      <Filter>addons\ofxTinyply\lib\tinyply</Filter>
+    <ClInclude Include="..\libs\tinyply\source\tinyply.h">
+      <Filter>addons\ofxTinyply\lib\tinyply\source</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

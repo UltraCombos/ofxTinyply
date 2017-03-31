@@ -6,10 +6,8 @@ void ofApp::setup(){
 	ofSetWindowPosition((ofGetScreenWidth() - ofGetWidth()) / 2, (ofGetScreenHeight() - ofGetHeight()) / 2);
 
 	tinyply = ofxTinyply::create(true);
-	string filename = "scene_04_ts0.ply";
-	//loadModel(filename);
 
-	camera.setupPerspective(false, 50, 0.01, 30.0f);
+	camera.setupPerspective(false, 50, 0.01, 100.0f);
 	camera.setDistance(5.0f);
 }
 
